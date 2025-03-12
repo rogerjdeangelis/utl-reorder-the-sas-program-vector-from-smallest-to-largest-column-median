@@ -95,7 +95,10 @@ WORK.WANT total obs=3
 \__ \ (_| \__ \                                                                                                      
 |___/\__,_|___/                                                                                                      
                                                                                                                      
-;                                                                                                                    
+;   
+
+%array(vars,values=%utl_varlist(sd1.have));
+
 data want;                                                                                                           
                                                                                                                      
                                                                                                                      
