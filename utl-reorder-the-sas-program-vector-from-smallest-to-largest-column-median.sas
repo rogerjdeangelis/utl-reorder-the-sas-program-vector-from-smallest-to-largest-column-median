@@ -61,7 +61,7 @@ Obs    V1    V2    V3
                                                                                                                      
      V1   V2  V3                                                                                                     
                                                                                                                      
-     22   43  24                                                                                                     
+     22   43  24   Move column 3 to column 2 position to get pdv in median order                                                                                                  
                                                                                                                      
 2. Reorder pdv from lowest to largest median                                                                         
                                                                                                                      
