@@ -63,7 +63,7 @@ Reorder the sas program vector from smallest to largest column median
                                                                                                                              
          V1   V2  V3                                                                                                         
                                                                                                                              
-         22   43  24                                                                                                         
+         22   43  24   Move column 3 to column 2 position to get pdv in median order                                                                                                       
                                                                                                                              
     2. Reorder pdv from lowest to largest median                                                                             
                                                                                                                              
