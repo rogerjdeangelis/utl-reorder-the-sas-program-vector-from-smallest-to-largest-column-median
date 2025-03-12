@@ -142,17 +142,21 @@ run;quit;
                                                                                                                      
 ;                                                                                                                    
                                                                                                                      
-%utl_submit_r64('                                                                                                    
-library(haven);                                                                                                      
-library(SASxport);                                                                                                   
-have<-read_sas("d:/sd1/have.sas7bdat");                                                                              
-want<-have[order(sapply(have, median))];                                                                             
-write.xport(want,file="d:/xpt/want.xpt");                                                                            
-');                                                                                                                  
-                                                                                                                     
-libname xpt xport "d:/xpt/want.xpt";                                                                                 
-data want;                                                                                                           
-  set xpt.want;                                                                                                      
-run;quit;                                                                                                            
-libname xpt clear;                                                                                                   
+%utl_rbeginx;                             
+parmcards4;                               
+library(haven);                           
+source("c:/oto/fn_tosas9x.R")             
+have<-read_sas("d:/sd1/have.sas7bdat");   
+have;                                     
+want<-have[order(sapply(have, median))];  
+want                                      
+fn_tosas9x(                               
+      inp    = have                       
+     ,outlib ="d:/sd1/"                   
+     ,outdsn ="want"                      
+     )                                    
+;;;;                                      
+%utl_rendx;                               
+                                          
+                                                                                            
                                                                                                                      
